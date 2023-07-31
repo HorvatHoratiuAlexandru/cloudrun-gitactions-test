@@ -4,6 +4,8 @@ WORKDIR /usr/api
 
 COPY . .
 
+RUN npm install -g @nestjs/cli
+
 RUN npm ci --only=production
 
 RUN npm run build
