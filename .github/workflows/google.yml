@@ -30,7 +30,7 @@ jobs:
       - name: build and push docker image
         env:
           GOOGLE_PROJECT: ${{ env.GOOGLE_PROJECT }}
-          run: |
-            gcloud auth configure-docker europe-west6-docker.pkg.dev
-            docker build -t europe-west6-docker.pkg.dev/gitactions-cloudrun-test/gitactions-cloudrun-test/gaction-n-cloudrun:latest .
-            docker push europe-west6-docker.pkg.dev/gitactions-cloudrun-test/gitactions-cloudrun-test/gaction-n-cloudrun:latest
+        run: |
+          gcloud auth configure-docker europe-west6-docker.pkg.dev
+          docker build -t europe-west6-docker.pkg.dev/gitactions-cloudrun-test/gitactions-cloudrun-test/gaction-n-cloudrun:latest .
+          docker push europe-west6-docker.pkg.dev/gitactions-cloudrun-test/gitactions-cloudrun-test/gaction-n-cloudrun:latest
